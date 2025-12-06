@@ -7,7 +7,8 @@ import { privateRouter } from './routes/private-api'
 const app = express()
 
 app.use(express.json())
-app.use("/api", publicRouter, privateRouter)
+app.use("/api/public", publicRouter)
+app.use("/api/private", privateRouter)
 app.use(errorMiddleware)
 
 app.listen(PORT, () => {

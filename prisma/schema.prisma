@@ -30,6 +30,7 @@ model Restaurant {
   description String
   isOpen      Boolean  @default(true)
   createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
   orders      Order[]
 }
 
